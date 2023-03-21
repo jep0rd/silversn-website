@@ -88,9 +88,23 @@ nav.sticky{
 }
 .link-item{
   text-align: center;
-  padding: 0 10px;
-
+  margin: 0 10px;
 }
+.link-item::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: var(--fuchsia);
+  border-radius: 1px;
+  bottom: -3px;
+  left: 0px;
+  transition: .17s ease-in;
+}
+.link-item:hover::after{
+  width: 100%;
+}
+
 .link-item a{
   color: var(--silver);
 }
