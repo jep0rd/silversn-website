@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&family=Secular+One&display=swap');
+
+/* 
+  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Russo One', sans-serif;
+  font-family: 'Secular One', sans-serif;
+*/
+
+:root{
+  --silver: #C4CED4;
+  --black: #0F0E0E;
+  --fuchsia: #EF426F;
+  --turquoise: #00B2A9;
+  --orange: #FF8200;
+}
+
+/* universal properties */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--silver);
+}
+body{
+  background-color: var(--black);
+}
+a{
+  text-decoration: none;
+  color: var(--silver);
+}
+ul{
+  list-style: none;
+}
+/* universal properties end */
+
+/* flex properties */
+.flex-r{
+  display: flex;
+  flex-direction: row;
+}
+.flex-c{
+  display: flex;
+  flex-direction: column;
+}
+/* flex end */
+
+
+/* position properties */
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.fixed{
+  position: fixed;
+}
+.sticky{
+  position: sticky;
+}
+/* position end */
+
+/* navigation bar */
+nav.sticky{
+  width: 100%;
+  height: 50px;
+  background: var(--black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 1px 5px #0f0e0e77;
+  top: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.nav-container a{
+  flex-grow: 1;
+}
+.spurs-logo{
+  width: 40px;
+}
+
+.title-nav{
+  align-items: center;
+  justify-content: space-between;
+}
+.link-item{
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* newsletter */
+.newsletter-container{
+  padding-left: 10px;
+}
+.email-form{
+  width: 200px;
+  background: none;
+  border: 3px solid var(--orange);
+  border-radius: 5px 0 0 5px;
+  height: 30px;
+  font-size: .8rem;
+  font-weight: bolder;
+  color: var(--orange);
+  padding-left: 5px;
+}
+.email-form::placeholder{
+  font-weight: bold;
+}
+a.subscribe-button{
+  border: 2px solid var(--orange);
+  border-radius: 0 5px 5px 0;
+  padding: 0 10px;
+  background: var(--orange);
+  font-weight: bolder;
+  color: var(--silver);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* header */
+header{
+  margin: auto;
+  padding: 75px 0 25px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-body{
+  max-height: 300px;
+  max-width: 650px;
+}
+
+.hero-body img{
+  height: 300px;
+}
+.title-container{
+  padding: 0 10px;
+  align-items: left;
+  justify-content: flex-start;
+}
+.title-body1,.title-body2,.title-body3{
+  justify-content: space-between;
+}
+
+@keyframes textAnimation{
+  0%{
+    background-position: 0 85%;
+  }
+  50%{
+    background-position: 100% 20%;
+  }
+  100%{
+    background-position: 0% 85%;
+  }
+}
+.header-title{
+  font-weight: bolder;
+  font-family: 'Secular One', sans-serif;
+  background-image: linear-gradient(60deg, var(--turquoise)33%,var(--fuchsia)66%,var(--orange));
+  background-size: 400% 400%;
+  animation: textAnimation 6s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  line-height: 65px;
+}
+.title-body1 .header-title{
+  font-size: 3rem;
+}
+.title-body2 .header-title{
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.title-body2{
+  justify-content: space-evenly;
+}
+.title-body3 .header-title{
+  font-size: 3rem;
+}
+
+.hero-body p{
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: justify;
+  padding-top: 10px;
+}
+p span.header-title{
+  color: var(--turquoise);
+  font-weight: bolder;
+  line-height: normal;
+  font-family: 'Poppins', sans-serif;
+}
+.learnmore-button{
+  bottom: 5px;
+  right: 150px;
+  border: 2px solid var(--turquoise);
+  border-radius: 5px;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--silver);
+}
+/* header end */
+
+
+.section-container{
+  height: 2000px;
+}
+
+  /* font-family: 'Secular One', sans-serif;
+  background-image: linear-gradient(60deg, var(--turquoise)33%,var(--fuchsia)66%,var(--orange));
+  background-size: 400% 400%;
+  animation: textAnimation 8s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: justify; */
+
+
+/* breakpoints */
+@media all and (min-width: 760px){
+
+}
