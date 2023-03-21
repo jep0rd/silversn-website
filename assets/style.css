@@ -28,7 +28,6 @@ body{
 }
 a{
   text-decoration: none;
-  color: var(--silver);
 }
 ul{
   list-style: none;
@@ -74,6 +73,7 @@ nav.sticky{
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  z-index: 2;
 }
 .nav-container a{
   flex-grow: 1;
@@ -89,6 +89,10 @@ nav.sticky{
 .link-item{
   text-align: center;
   padding: 0 10px;
+
+}
+.link-item a{
+  color: var(--silver);
 }
 
 /* newsletter */
@@ -98,31 +102,32 @@ nav.sticky{
 .email-form{
   width: 200px;
   background: none;
-  border: 3px solid var(--orange);
+  border: 3px solid var(--fuchsia);
   border-radius: 5px 0 0 5px;
   height: 30px;
   font-size: .8rem;
   font-weight: bolder;
-  color: var(--orange);
+  color: var(--fuchsia);
   padding-left: 5px;
 }
 .email-form::placeholder{
   font-weight: bold;
 }
 a.subscribe-button{
-  border: 2px solid var(--orange);
+  border: 2px solid var(--fuchsia);
   border-radius: 0 5px 5px 0;
   padding: 0 10px;
-  background: var(--orange);
+  background: var(--fuchsia);
   font-weight: bolder;
   color: var(--silver);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+/* newsletter-end */
 
 /* header */
 header{
   margin: auto;
-  padding: 75px 0 25px 0;
+  padding: 75px 0 75px 0;
   align-items: center;
   justify-content: center;
 }
@@ -130,6 +135,7 @@ header{
 .hero-body{
   max-height: 300px;
   max-width: 650px;
+  z-index: 1;
 }
 
 .hero-body img{
@@ -195,21 +201,34 @@ p span.header-title{
   font-family: 'Poppins', sans-serif;
 }
 .learnmore-button{
-  bottom: 5px;
-  right: 150px;
+  bottom: 12px;
+  right: 200px;
   border: 2px solid var(--turquoise);
   border-radius: 5px;
   padding: 0 15px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bolder;
   color: var(--silver);
 }
 /* header end */
 
+header::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(var(--turquoise)33.33%,var(--fuchsia)0 66.66%,var(--orange)0 99.99%);
+  overflow: hidden;
+}
 
 .section-container{
   height: 2000px;
+  background-color: var(--silver);
+}
+#about h1{
+  color: black;
 }
 
   /* font-family: 'Secular One', sans-serif;
