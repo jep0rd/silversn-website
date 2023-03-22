@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Secular+One&display=swap');
 
 /* 
-  font-family: 'Playfair Display', serif;
   font-family: 'Poppins', sans-serif;
-  font-family: 'Russo One', sans-serif;
   font-family: 'Secular One', sans-serif;
 */
 
@@ -33,6 +31,18 @@ ul{
   list-style: none;
 }
 /* universal properties end */
+
+/* font sizes */
+.fsize1{
+  font-size: 3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.fsize3{
+  font-size: 1.1rem;
+}
+
 
 /* flex properties */
 .flex-r{
@@ -99,7 +109,7 @@ nav.sticky{
   border-radius: 1px;
   bottom: -3px;
   left: 0px;
-  transition: .17s ease-in;
+  transition: .2s;
 }
 .link-item:hover::after{
   width: 100%;
@@ -121,11 +131,14 @@ nav.sticky{
   height: 30px;
   font-size: .8rem;
   font-weight: bolder;
-  color: var(--fuchsia);
+  color: var(--turquoise);
   padding-left: 5px;
 }
 .email-form::placeholder{
   font-weight: bold;
+}
+.email-form:focus-visible {
+  outline: -webkit-focus-ring-color none;
 }
 a.subscribe-button{
   border: 2px solid var(--fuchsia);
@@ -141,7 +154,7 @@ a.subscribe-button{
 /* header */
 header{
   margin: auto;
-  padding: 75px 0 75px 0;
+  padding: 75px 0 150px 0;
   align-items: center;
   justify-content: center;
 }
@@ -155,6 +168,9 @@ header{
 .hero-body img{
   height: 300px;
 }
+.title-container>*{
+  color: var(--silver);
+}
 .title-container{
   padding: 0 10px;
   align-items: left;
@@ -163,6 +179,7 @@ header{
 .title-body1,.title-body2,.title-body3{
   justify-content: space-between;
 }
+
 
 @keyframes textAnimation{
   0%{
@@ -178,7 +195,12 @@ header{
 .header-title{
   font-weight: bolder;
   font-family: 'Secular One', sans-serif;
-  background-image: linear-gradient(60deg, var(--turquoise)33%,var(--fuchsia)66%,var(--orange));
+  background-image: 
+    linear-gradient(
+      60deg,
+      var(--turquoise)33%,
+      var(--fuchsia)66%,
+      var(--orange));
   background-size: 400% 400%;
   animation: textAnimation 6s infinite linear;
   -webkit-background-clip: text;
@@ -215,8 +237,8 @@ p span.header-title{
   font-family: 'Poppins', sans-serif;
 }
 .learnmore-button{
-  bottom: 12px;
-  right: 200px;
+  bottom: 10px;
+  right: 145px;
   border: 2px solid var(--turquoise);
   border-radius: 5px;
   padding: 0 15px;
@@ -225,9 +247,8 @@ p span.header-title{
   font-weight: bolder;
   color: var(--silver);
 }
-/* header end */
 
-header::after{
+/* header::after{
   content: '';
   position: absolute;
   bottom: 0px;
@@ -235,15 +256,35 @@ header::after{
   width: 100%;
   background: linear-gradient(var(--turquoise)33.33%,var(--fuchsia)0 66.66%,var(--orange)0 99.99%);
   overflow: hidden;
+} */
+
+/* header end */
+
+
+
+/* news */
+.news-container{
+  margin: auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+.top-news::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  background: var(--orange);
+}
+.top-news::after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  top: 2px;
+  background: var(--orange);
 }
 
-.section-container{
-  height: 2000px;
-  background-color: var(--silver);
-}
-#about h1{
-  color: black;
-}
 
   /* font-family: 'Secular One', sans-serif;
   background-image: linear-gradient(60deg, var(--turquoise)33%,var(--fuchsia)66%,var(--orange));
@@ -255,6 +296,6 @@ header::after{
 
 
 /* breakpoints */
-@media all and (min-width: 760px){
+@media all and (min-width: 840px){
 
 }
