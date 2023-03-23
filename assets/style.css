@@ -31,6 +31,10 @@ a{
 ul{
   list-style: none;
 }
+*::selection{
+  background-color: var(--turquoise);
+  color: var(--black);
+}
 /* universal properties end */
 
 /* font sizes */
@@ -168,7 +172,6 @@ header{
   justify-content: space-between;
 }
 
-
 @keyframes textAnimation{
   0%{
     background-position: 0 85%;
@@ -285,7 +288,7 @@ p span.header-title{
   margin-right: 10px;
 }
 .article-author a{
-  color: var(--orange);
+  color: var(--silver);
 }
 
 .article-image img{
@@ -363,9 +366,39 @@ p span.header-title{
 }
 .recap1:hover .recap-button{
   visibility: visible;
-
 }
 
+/* .recap-container::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background: var(--orange);
+}
+.recap-container::after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  bottom: 2px;
+  right: 0;
+  background: var(--orange);
+} */
+
+/* game recaps end */
+
+/* featured */
+.featured-container{
+  margin: auto;
+  max-width: 1200px;
+  height: 500px;
+  padding: 20px;
+}
+
+.featured-container .section-title::before, .featured-container .section-title::after{
+  background-color: var(--fuchsia);
+}
 
 /* breakpoints */
 @media all and (min-width: 840px){
