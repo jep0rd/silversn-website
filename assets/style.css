@@ -85,8 +85,7 @@ nav.sticky{
   width: 100%;
   height: 50px;
   background: var(--black);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 1px 5px #0f0e0e77;
+  box-shadow: 0px 2px 3px #0f0e0e77;
   top: 0;
   z-index: 1;
   align-items: center;
@@ -114,7 +113,7 @@ nav.sticky{
   position: absolute;
   width: 0;
   height: 3px;
-  background-color: var(--orange);
+  background-color: var(--turquoise);
   border-radius: 1px;
   bottom: -3px;
   left: 0px;
@@ -123,39 +122,66 @@ nav.sticky{
 .link-item:hover::after{
   width: 100%;
 }
+.link-item a:focus{
+  color: var(--orange);
+}
 
 .link-item a{
   color: var(--silver);
 }
 
-/* newsletter */
-.newsletter-container{
+/* store button */
+.store-container{
   padding-left: 10px;
 }
 a.store-button{
-  border: 2px solid var(--orange);
+  border: 2px solid var(--turquoise);
   border-radius: 12px;
   padding: 0 10px;
-  background: var(--orange);
+  background: var(--turquoise);
   font-weight: bolder;
   color: var(--black);
   /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); */
 }
-/* newsletter-end */
+/* store-button-end */
 
 /* header */
 header{
-  margin: auto;
-  padding: 75px 0 150px 0;
+  padding: 150px 0 150px 0;
   align-items: center;
   justify-content: center;
 }
 
 .hero-body{
-  max-height: 300px;
-  max-width: 650px;
-  z-index: 1;
+  max-width: 700px;
+  max-height: 350px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  background: var(--black);
+  /* margin-right: 200px; */
 }
+.hero-body::after{
+  content: '';
+  position: absolute;
+  top:-5px;
+  left:-5px;
+  z-index: -1;
+  width: 710px;
+  height: 350px;
+  background-image: 
+  linear-gradient(
+    60deg,
+    var(--turquoise)33%,
+    var(--fuchsia)66%,
+    var(--orange));
+background-size: 400% 400%;
+animation: textAnimation 5s infinite linear;
+  overflow: hidden;
+  border-radius: 8px;
+
+}
+
 
 .hero-body img{
   height: 300px;
@@ -193,7 +219,7 @@ header{
       var(--fuchsia)66%,
       var(--orange));
   background-size: 400% 400%;
-  animation: textAnimation 6s infinite linear;
+  animation: textAnimation 5s infinite linear;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -230,7 +256,7 @@ p span.header-title{
 }
 .learnmore-button{
   bottom: 10px;
-  right: 145px;
+  right: 10px;
   border: 2px solid var(--turquoise);
   border-radius: 5px;
   padding: 0 15px;
@@ -239,6 +265,7 @@ p span.header-title{
   font-weight: bolder;
   color: var(--silver);
 }
+/* header end */
 
 /* news */
 .news-container{
@@ -252,7 +279,7 @@ p span.header-title{
   width: 100%;
   height: 2px;
   top: 0;
-  background: var(--turquoise);
+  background: var(--orange);
 }
 .section-title::after{
   content: '';
@@ -260,7 +287,7 @@ p span.header-title{
   width: 50px;
   height: 5px;
   top: 2px;
-  background: var(--turquoise);
+  background: var(--orange);
 }
 
 /* top news article */
@@ -288,7 +315,7 @@ p span.header-title{
   margin-right: 10px;
 }
 .article-author a{
-  color: var(--silver);
+  color: var(--orange);
 }
 
 .article-image img{
