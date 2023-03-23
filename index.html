@@ -12,8 +12,8 @@
 <body>
   <!-- navigation -->
   <nav class="nav-container flex-r sticky">
-    <a href="index.html">
-      <img src="assets/images/spurs-logo.png" alt="Spurs logo" class="spurs-logo">
+    <a href="#top">
+      <img src="assets/images/spurs-logo.png" alt="Spurs logo" class="spurs-logo" id="logo">
     </a>
     <ul class="flex-r container-nav">
       <li class="link-item relative"><a href="#news">News</a></li>
@@ -28,7 +28,7 @@
   <!-- navigation end -->
 
   <!-- header -->
-  <header class="flex-r relative">
+  <header class="flex-r relative" id="top">
     <div class="hero-body flex-r relative">
       <img src="assets/images/hero-image.png" alt="jersey logo">
       <div class="title-container flex-c">
@@ -59,14 +59,14 @@
       <a href="#featured" class="learnmore-button absolute">
         LEARN MORE
       </a>
-      <div class="absolute learnmore-padding"></div>
+      <div class="absolute learnmore-padding" id="news"></div>
     </div>
   </header>
   <!-- header end -->
-
-  <section class="flex-c news-container" >
+  <div></div>
+  <section class="flex-c news-container">
     <div class="flex-r section-title relative">
-      <span class="fsize1" id="news">TRENDING NEWS</span>
+      <span class="fsize1">TRENDING NEWS</span>
     </div>
 
     <!-- top news article -->
@@ -180,7 +180,7 @@
 
   <section class="featured-container">
     <div class="flex-r section-title relative">
-      <span class="fsize1" id="news">Featured content</span>
+      <span class="fsize1" id="news">featured content</span>
     </div>
   </section>
   
