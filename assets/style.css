@@ -80,6 +80,20 @@ ul{
 }
 /* position end */
 
+/* keyframes */
+@keyframes bgAnimation{
+  0%{
+    background-position: 0 85%;
+  }
+  50%{
+    background-position: 100% 20%;
+  }
+  100%{
+    background-position: 0% 85%;
+  }
+}
+/* keyframes end */
+
 /* navigation bar */
 nav.sticky{
   width: 100%;
@@ -87,7 +101,6 @@ nav.sticky{
   background: var(--black);
   box-shadow: 0px 2px 3px #0f0e0e77;
   top: 0;
-  z-index: 1;
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
@@ -135,13 +148,18 @@ nav.sticky{
   padding-left: 10px;
 }
 a.store-button{
-  border: 2px solid var(--turquoise);
   border-radius: 12px;
   padding: 0 10px;
-  background: var(--turquoise);
   font-weight: bolder;
+  background-image: 
+    linear-gradient(
+      60deg,
+      var(--turquoise)33%,
+      var(--fuchsia)66%,
+      var(--orange));
+  background-size: 400% 400%;
+  animation: bgAnimation 8s infinite linear;
   color: var(--black);
-  /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); */
 }
 /* store-button-end */
 
@@ -159,14 +177,13 @@ header{
   padding: 20px;
   border-radius: 5px;
   background: var(--black);
-  /* margin-right: 200px; */
 }
 .hero-body::after{
   content: '';
   position: absolute;
   top:-5px;
   left:-5px;
-  z-index: -1;
+  z-index: -2;
   width: 710px;
   height: 350px;
   background-image: 
@@ -176,7 +193,7 @@ header{
     var(--fuchsia)66%,
     var(--orange));
 background-size: 400% 400%;
-animation: textAnimation 5s infinite linear;
+animation: bgAnimation 8s infinite linear;
   overflow: hidden;
   border-radius: 8px;
 
@@ -197,18 +214,6 @@ animation: textAnimation 5s infinite linear;
 .title-body1,.title-body2,.title-body3{
   justify-content: space-between;
 }
-
-@keyframes textAnimation{
-  0%{
-    background-position: 0 85%;
-  }
-  50%{
-    background-position: 100% 20%;
-  }
-  100%{
-    background-position: 0% 85%;
-  }
-}
 .header-title{
   font-weight: bolder;
   font-family: 'Secular One', sans-serif;
@@ -219,7 +224,7 @@ animation: textAnimation 5s infinite linear;
       var(--fuchsia)66%,
       var(--orange));
   background-size: 400% 400%;
-  animation: textAnimation 5s infinite linear;
+  animation: bgAnimation 8s infinite linear;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -247,23 +252,31 @@ animation: textAnimation 5s infinite linear;
   text-align: justify;
   padding-top: 10px;
 }
-p span.header-title{
-  color: var(--turquoise);
-  font-weight: bolder;
-  line-height: normal;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-}
+
 .learnmore-button{
-  bottom: 10px;
-  right: 10px;
-  border: 2px solid var(--turquoise);
-  border-radius: 5px;
-  padding: 0 15px;
-  text-align: center;
-  font-size: 1rem;
+  bottom: -20px;
+  right: 50px;
   font-weight: bolder;
-  color: var(--silver);
+  font-size: 1.5rem;
+  background-image: 
+    linear-gradient(
+      60deg,
+      var(--turquoise)33%,
+      var(--fuchsia)66%,
+      var(--orange));
+  background-size: 400% 400%;
+  animation: bgAnimation 8s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+.learnmore-padding{
+  bottom: -20px;
+  right: 40px;
+  width: 172px;
+  height: 50px;
+  background: var(--black);
+  z-index: 0;
 }
 /* header end */
 
