@@ -449,13 +449,12 @@ header{
 .featured-container{
   margin: auto;
   max-width: 1200px;
-  height: 500px;
   padding: 20px;
-  align-items: center;
 }
 .featured-container .section-title::before, .featured-container .section-title::after{
   background-color: var(--fuchsia);
 }
+
 .featured-container img{
   width: 100%;
   margin-bottom: 10px;
@@ -466,9 +465,6 @@ header{
 }
 .history-content{
   padding-right: 20px;
-}
-.history-content span{
-  font-weight: bolder;
 }
 .history-content p{
   padding-inline: 20px;
@@ -488,20 +484,75 @@ header{
 
 .jersey-title1,.jersey-title2{
   display: block;
-  width: 80%;
+  margin: auto;
   text-align: center;
   font-weight: lighter;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   letter-spacing: -1px;
+
+}
+.jersey-title1{
+  padding-inline: 120px;
 }
 .jersey-title2{
-  margin-bottom: 40px;
+  padding-inline: 120px;
 }
 .jersey-title3{
-  width: 90%;
   text-align: center;
-  margin-bottom: 60px;
+  margin: 40px auto 100px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-inline: 120px;
 }
+
+
+.jersey-details{
+  width: 100%;
+  margin-bottom: 100px;
+  padding-inline: 20px;
+}
+.jersey-details > *{
+  width: 50%;
+}
+.jersey-details .image-left{
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+.jersey-details .image-left img{
+  max-width: 400px;
+  margin-bottom: 0;
+}
+.content-left{
+  align-items: flex-end;
+}
+.content-left span{
+  width: 380px;
+}
+.content-left .line{
+  width: 380px;
+  height: 3px;
+  background-color: var(--fuchsia);
+  margin-bottom: 5px;
+}
+.content-left p{
+  width: 380px;
+}
+
+.jersey-details .image-right img{
+  max-width: 400px;
+  margin-bottom: 0;
+  padding-left: 40px;
+}
+.content-right .line{
+  width: 380px;
+  height: 3px;
+  background-color: var(--fuchsia);
+  margin-bottom: 5px;
+}
+.content-right p{
+  width: 380px;
+}
+
 
 /* breakpoints */
 @media all and (min-width: 840px){
