@@ -608,27 +608,44 @@ a.shop-button{
 a.shop-button:hover{
   color: var(--silver);
 }
+/* featured end */
 
-
-/* .newsletter{
-  border: 3px solid var(--fuchsia);
-  border-radius: 50px;
+/* schedule */
+.schedule-container{
+  max-width: 1200px;
   height: auto;
-  margin-left: 20px;
-  margin-top: 40px;
   padding: 20px;
+  margin-inline: auto;
+  margin-bottom: 60px;
 }
-.newsletter .title{
-  font-size: 2rem;
-  font-weight: bold;
-  top: -26px;
-  left: 60px;
-  padding-inline: 10px;
-  background-color: var(--black);
-} */
-/* .carousel-container .carousel{
-  width: 50%;
-} */
+.schedule-container .section-title span:nth-child(2){
+  display: inline-block;
+  color: var(--orange);
+  margin-left: 10px;
+}
+.schedule-container .section-title::before, .schedule-container .section-title::after{
+  background-color: var(--orange);
+}
+.schedule-body{
+  width: 100%;
+  margin: auto;
+  padding-inline: 20px;
+  padding-block: 20px 120px;
+}
+.schedule-body img{
+  max-width: 100%;
+  margin: auto;
+}
+.schedule-body::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: var(--darkgray);
+}
+
 
 /* breakpoints */
 @media all and (min-width: 840px){
