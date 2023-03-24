@@ -560,26 +560,38 @@ header{
 /* carousel */
 .carousel-container{
   padding-inline: 20px;
-  justify-content: space-between;
+  justify-content: center;
   padding-block: 60px 120px;
 }
 .carousel-body{
   padding: 5px;
   border-radius: 5px;
   background-image: url(images/background-pattern.png);
-  width: 40%;
-  background-size: 50%;
+  width: 50%;
+  background-size: 100%;
 }
 .carousel-item img{
   max-width: 100%;
   margin: auto;
 }
 .carousel-description{
-  align-items: center;
+  align-items: flex-end;
   width: 50%;
-  padding: 20px 0 20px 20px;
+  bottom: 130px;
+  padding: 20px;
   text-align: center;
   justify-content: center;
+}
+.carousel-body::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      180deg,
+      rgb(0 0 0 / 0)60%,
+      rgb(0 0 0 / .6)
+    );
 }
 a.subscription-link b{
   color: var(--fuchsia);
@@ -620,7 +632,7 @@ a.shop-button:hover{
   height: auto;
   padding: 20px;
   margin-inline: auto;
-  margin-bottom: 60px;
+  margin-bottom: 160px;
 }
 .schedule-container .section-title span:nth-child(2){
   display: inline-block;
@@ -653,8 +665,25 @@ a.shop-button:hover{
   left: 0;
   background: var(--darkgray);
 }
+/* schedule end */
 
-
+/* about */
+.about-container{
+  max-width: 800px;
+  height: 500px;
+  padding: 20px;
+  margin-inline: auto;
+  border: 10px solid var(--silver);
+  border-top-left-radius: 86px;
+}
+.about-container img{
+  max-width: 180px;
+  border-radius: 50%;
+  top: -9px;
+  left: -9px;
+  border: 10px solid var(--silver);
+  background-color: var(--darkgray);
+}
 /* breakpoints */
 @media all and (min-width: 840px){
 
