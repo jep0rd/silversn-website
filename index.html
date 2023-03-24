@@ -22,13 +22,16 @@
       <li class="link-item relative"><a href="#about">About</a></li>
     </ul>
     <div class="flex-r store-container">
-      <a href="#" class="store-button">STORE</a>
+      <a href="https://spursfanshop.com/san-antonio-spurs/collections/spurs-city-edition/" class="store-button" target="_blank">
+        STORE
+      </a>
     </div>
   </nav>
   <!-- navigation end -->
 
+  <div id="top" class="absolute"></div>
   <!-- header -->
-  <header class="flex-r relative" id="top">
+  <header class="flex-r relative">
     <div class="hero-body flex-r relative">
       <img src="assets/images/hero-image.png" alt="jersey logo">
       <div class="title-container flex-c">
@@ -59,12 +62,14 @@
       <a href="#featured" class="learnmore-button absolute">
         LEARN MORE
       </a>
-      <div class="absolute learnmore-padding" id="news"></div>
+      <div class="absolute learnmore-padding"></div>
     </div>
   </header>
   <!-- header end -->
-  <div></div>
-  <section class="flex-c news-container">
+
+  <!-- news -->
+  <section class="flex-c news-container relative">
+    <div class="absolute" id="news"></div>
     <div class="flex-r section-title relative">
       <span class="fsize1">TRENDING NEWS</span>
     </div>
@@ -177,11 +182,39 @@
       </div>
     </section>
   </section>
+  <!-- news end -->
 
-  <section class="featured-container">
+  <section class="featured-container flex-c" id="featured">
+    <img src="assets/images/featured-banner.png" alt="banner">
     <div class="flex-r section-title relative">
       <span class="fsize1" id="news">featured content</span>
     </div>
+    <!-- history -->
+    <article class="flex-r history-container">
+      <div class="flex-c history-content">
+        <span class="fsize2">The Fiesta</span>
+        <p class="fsize3">
+          The Fiesta jersey harkens back to the Spurs’ iconic warmup wear and court design from the ’90s, and pays homage to San Antonio’s vibrant history and culture, and its Hispanic community in particular.
+        </p>
+        <div class="flex-r read-more-container">
+          <a href="https://www.nba.com/spurs/news/spurs-unveil-fiesta-themed-city-edition-uniforms-inspired-by-1996-nba-all-star-game" target="_blank">
+            Continue reading >
+          </a>
+        </div>
+      </div>
+      <div class="flex-c history-image">
+        <img src="/assets/images/spus-fiesta-logo.png" alt="fiesta logo">
+      </div>
+    </article>
+    <span class="jersey-title1">
+      It was early '96 and the NBA All-Stars were in town.
+    </span>
+    <span class="jersey-title2">
+      Under the bright lights of the Dome, they donned the uniforms that would inspire this season's City Edition—rich turquoise, retro accents and all.
+    </span>
+    <span class="jersey-title3 fsize2">
+      Welcome to the final chapter of our Fiesta™ trilogy.
+    </span>
   </section>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
