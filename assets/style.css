@@ -102,6 +102,15 @@ p{
 }
 /* keyframes end */
 
+#top{
+  top: 0;
+  left: 0;
+}
+#news{
+  top: -35px;
+  left: 0;
+}
+
 /* navigation bar */
 nav.sticky{
   width: 100%;
@@ -151,36 +160,20 @@ nav.sticky{
   color: var(--turquoise);
 }
 
-
-
-/* store button */
 .store-container{
   padding-left: 10px;
 }
 a.store-button{
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 0 10px;
   font-weight: bolder;
-  background-image: 
-    linear-gradient(
-      60deg,
-      var(--turquoise)33%,
-      var(--fuchsia)66%,
-      var(--orange));
-  background-size: 400% 400%;
-  animation: bgAnimation 8s infinite linear;
+  background-color: var(--turquoise);
   color: var(--black);
 }
-/* store-button-end */
-
-#top{
-  top: 0;
-  left: 0;
+a.store-button:hover{
+  background-color: #02fff2;
 }
-#news{
-  top: -35px;
-  left: 0;
-}
+/* navigation bar end */
 
 /* header */
 header{
@@ -211,7 +204,7 @@ header{
     var(--fuchsia)66%,
     var(--orange));
   background-size: 400% 400%;
-  animation: bgAnimation 8s infinite linear;
+  animation: bgAnimation 4s infinite linear;
   overflow: hidden;
   border-radius: 8px;
 
@@ -242,7 +235,7 @@ header{
       var(--fuchsia)66%,
       var(--orange));
   background-size: 400% 400%;
-  animation: bgAnimation 8s infinite linear;
+  animation: bgAnimation 4s infinite linear;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -283,7 +276,7 @@ header{
       var(--fuchsia)66%,
       var(--orange));
   background-size: 400% 400%;
-  animation: bgAnimation 8s infinite linear;
+  animation: bgAnimation 4s infinite linear;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1;
@@ -385,7 +378,7 @@ header{
 /* game recaps */
 .recap-container{
   width: 100%;
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 120px 20px;
   align-items: center;
 }
 .section-title2 span:nth-child(2){
@@ -561,18 +554,78 @@ header{
 }
 
 /* carousel */
+.carousel-container{
+  padding-inline: 20px;
+  justify-content: space-between;
+  padding-block: 60px 120px;
+}
 .carousel-body{
   padding: 5px;
-  background-image: url(/assets/images/top-news-background.png);
-  width: 50%;
-  margin-inline: 20px;
-
+  border-radius: 5px;
+  background-image: url(/assets/images/background-pattern.png);
+  width: 40%;
+  background-size: 50%;
 }
 .carousel-item img{
   max-width: 100%;
   margin: auto;
 }
+.carousel-description{
+  align-items: center;
+  width: 50%;
+  padding: 20px 0 20px 20px;
+  text-align: center;
+  justify-content: center;
+}
+a.subscription-link b{
+  color: var(--fuchsia);
+}
+a.subscription-link b:hover{
+  color: #ff7096;
+}
+.shop span{
+  margin-bottom: 10px;
+}
 
+a.shop-button{
+  width: 240px;
+  border-radius: 15px;
+  padding-block: 8px;
+  box-shadow: 0px 0px 10px var(--darkgray);
+  color: var(--black);
+  background-image: 
+    linear-gradient(
+      60deg,
+      var(--turquoise)33%,
+      var(--fuchsia)66%,
+      var(--orange));
+  background-size: 400% 400%;
+  animation: bgAnimation 4s infinite linear;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  align-self: center;
+}
+a.shop-button:hover{
+  color: var(--silver);
+}
+
+
+/* .newsletter{
+  border: 3px solid var(--fuchsia);
+  border-radius: 50px;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 40px;
+  padding: 20px;
+}
+.newsletter .title{
+  font-size: 2rem;
+  font-weight: bold;
+  top: -26px;
+  left: 60px;
+  padding-inline: 10px;
+  background-color: var(--black);
+} */
 /* .carousel-container .carousel{
   width: 50%;
 } */
