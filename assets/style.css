@@ -59,6 +59,9 @@ p{
   font-size: 1.1rem;
   font-weight: normal;
 }
+small{
+  font-size: .7rem;
+}
 
 
 /* flex properties */
@@ -160,18 +163,19 @@ nav.sticky{
   color: var(--turquoise);
 }
 
-.store-container{
+.career-container{
   padding-left: 10px;
 }
-a.store-button{
+a.career-button{
   border-radius: 10px;
   padding: 0 10px;
   font-weight: bolder;
-  background-color: var(--turquoise);
+  background-color: var(--silver);
   color: var(--black);
 }
-a.store-button:hover{
-  background-color: #02fff2;
+a.career-button:hover{
+  background-color: var(--orange);
+  color: var(--silver);
 }
 /* navigation bar end */
 
@@ -635,6 +639,10 @@ a.shop-button:hover{
 .schedule-body img{
   max-width: 100%;
   margin: auto;
+}
+.schedule-body small{
+  text-align: center;
+  color: var(--darkgray);
 }
 .schedule-body::after{
   content: '';
