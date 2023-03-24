@@ -578,7 +578,7 @@ header{
   align-items: flex-end;
   width: 50%;
   bottom: 130px;
-  padding: 20px;
+  padding: 20px 40px;
   text-align: center;
   justify-content: center;
 }
@@ -589,8 +589,8 @@ header{
   background: 
     linear-gradient(
       180deg,
-      rgb(0 0 0 / 0)60%,
-      rgb(0 0 0 / .6)
+      rgb(0 0 0 / 0)20%,
+      rgb(0 0 0 / 1)
     );
 }
 a.subscription-link b{
@@ -632,7 +632,7 @@ a.shop-button:hover{
   height: auto;
   padding: 20px;
   margin-inline: auto;
-  margin-bottom: 160px;
+  margin-bottom: 120px;
 }
 .schedule-container .section-title span:nth-child(2){
   display: inline-block;
@@ -645,8 +645,7 @@ a.shop-button:hover{
 .schedule-body{
   width: 100%;
   margin: auto;
-  padding-inline: 20px;
-  padding-block: 20px 120px;
+  padding: 20px;
 }
 .schedule-body img{
   max-width: 100%;
@@ -656,34 +655,41 @@ a.shop-button:hover{
   text-align: center;
   color: var(--darkgray);
 }
-.schedule-body::after{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background: var(--darkgray);
-}
 /* schedule end */
 
 /* about */
 .about-container{
-  max-width: 800px;
+  max-width: 1200px;
   height: 500px;
   padding: 20px;
   margin-inline: auto;
-  border: 10px solid var(--silver);
-  border-top-left-radius: 86px;
 }
-.about-container img{
-  max-width: 180px;
-  border-radius: 50%;
-  top: -9px;
-  left: -9px;
-  border: 10px solid var(--silver);
+.about-container .section-title span:nth-child(1){
+  display: inline-block;
+  color: var(--darkgray);
+  margin-right: 10px;
+}
+.about-container .section-title::before, .about-container .section-title::after{
   background-color: var(--darkgray);
 }
+
+.contributor{
+  padding: 20px ;
+}
+
+.contributor img{
+  max-width: 200px;
+  border-radius: 50%;
+  background-color: var(--darkgray);
+}
+
+
+
+
+
+
+
+
 /* breakpoints */
 @media all and (min-width: 840px){
 
