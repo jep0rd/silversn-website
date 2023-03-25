@@ -194,21 +194,21 @@ header{
   justify-content: center;
 }
 
-.hero-body{
-  max-width: 700px;
-  max-height: 350px;
-  padding: 20px;
+.hero-container{
+  width: 230px;
+  height: 250px;
+  padding: 10px 20px;
   border-radius: 5px;
   background: var(--black);
 }
-.hero-body::after{
+.hero-container::after{
   content: '';
   position: absolute;
   top:-5px;
   left:-5px;
   z-index: -2;
-  width: 710px;
-  height: 350px;
+  width: 240px;
+  height: 260px;
   background-image: 
   linear-gradient(
     60deg,
@@ -219,21 +219,9 @@ header{
   animation: bgAnimation 4s infinite linear;
   overflow: hidden;
   border-radius: 8px;
-
-}
-.hero-body img{
-  height: 300px;
 }
 .title-container>*{
   color: var(--silver);
-}
-.title-container{
-  padding: 0 10px;
-  align-items: left;
-  justify-content: flex-start;
-}
-.title-body1,.title-body2,.title-body3{
-  justify-content: space-between;
 }
 .header-title{
   font-weight: bolder;
@@ -249,31 +237,14 @@ header{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
-  line-height: 65px;
+  line-height: 55px;
 }
-.title-body1 .header-title{
+.title-body .header-title{
   font-size: 3rem;
-}
-.title-body2 .header-title{
-  font-size: 4rem;
-  letter-spacing: 2px;
-}
-.title-body2{
-  justify-content: space-evenly;
-}
-.title-body3 .header-title{
-  font-size: 3rem;
-}
-.hero-body p{
-  font-size: 1rem;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  text-align: justify;
-  padding-top: 10px;
 }
 .learnmore-button{
   bottom: -20px;
-  right: 50px;
+  right: 39px;
   font-weight: bolder;
   font-size: 1.5rem;
   background-image: 
@@ -290,7 +261,7 @@ header{
 }
 .learnmore-padding{
   bottom: -20px;
-  right: 40px;
+  right: 28px;
   width: 172px;
   height: 50px;
   background: var(--black);
@@ -903,50 +874,6 @@ a.shop-button:hover{
 }
 
 @media all and (max-width: 740px){
-  .hero-body{
-    max-width: 550px;
-    max-height: 300px;
-    padding: 10px;
-    border-radius: 5px;
-    background: var(--black);
-  }
-  .hero-body::after{
-    max-width: 560px;
-    max-height: 265px;
-  }
-  .hero-body img{
-    max-width: 140px;
-    height: auto;
-  }
-  .title-container{
-    max-width: 460px;
-    padding-inline: 5px;
-  }
-  .header-title{
-    line-height: 50px;
-  }
-  .title-body1 .header-title{
-    font-size: 2.25rem;
-  }
-  .title-body2 .header-title{
-    font-size: 3rem;
-  }
-  .title-body3 .header-title{
-    font-size: 2.25rem;
-  }
-  .hero-body p{
-    font-size: .9rem;
-    z-index: 1;
-  }
-  .learnmore-button{
-    right: 35px;
-    font-size: 1.5rem;
-  }
-  .learnmore-padding{
-    bottom: -20px;
-    right: 24px;
-    width: 173px;
-  }
   .jersey-title1,.jersey-title2{
     font-size: 1.4rem;
     padding-inline: 80px;
@@ -979,50 +906,4 @@ a.shop-button:hover{
   .container-nav{
     display: none;
   }
-
-  .hero-body{
-    max-width: 550px;
-    height: 245px;
-    padding: 10px;
-    border-radius: 5px;
-    background: var(--black);
-  }
-  .hero-body::after{
-    max-width: 490px;
-    max-height: 255px;
-  }
-  .hero-body img{
-    display: none;
-  }
-  .title-container{
-    max-width: 460px;
-    padding-inline: 5px;
-  }
-  .header-title{
-    line-height: 50px;
-  }
-  .title-body1 .header-title{
-    font-size: 2.25rem;
-  }
-  .title-body2 .header-title{
-    font-size: 3rem;
-  }
-  .title-body3 .header-title{
-    font-size: 2.25rem;
-  }
-  .hero-body p{
-    font-size: .9rem;
-    z-index: 1;
-    padding-top: 5px;
-  }
-  .learnmore-button{
-    right: 30px;
-    font-size: 1.5rem;
-  }
-  .learnmore-padding{
-    bottom: -20px;
-    right: 19px;
-    width: 173px;
-  }
-
 }
