@@ -35,6 +35,11 @@ a{
 ul{
   list-style: none;
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
 }
 p{
   color: var(--lightgray);
@@ -124,7 +129,7 @@ nav.sticky{
   top: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 20px;
   z-index: 2;
 }
 .nav-container a{
@@ -161,6 +166,7 @@ nav.sticky{
 }
 .link-item a:hover{
   color: var(--silver);
+  transition: .2s;
 }
 
 .store-container{
@@ -177,6 +183,7 @@ a.store-button{
 a.store-button:hover{
   background-color: var(--black);
   color: var(--silver);
+  transition: .2s;
 }
 /* navigation bar end */
 
@@ -753,11 +760,74 @@ a.shop-button:hover{
 .join-button:hover{
   background-color: var(--black);
   color: var(--silver);
+  transition: .2s;
+}
+/* community end */
+
+/* footer */
+.page-footer{
+  max-width: 1200px;
+  border-top: 3px solid var(--silver);
+  bottom: -100px;  
+  padding: 40px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-logo{
+  flex-basis: 50%;
+  width: 50%;
+  height: auto;
+  align-items: center;
+}
+.footer-logo img{
+  width: 50px;
+}
+.footer-newsletter{
+  flex-basis: 50%;
+  width: 50%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+}
+.footer-newsletter .title{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.footer-newsletter span:nth-child(2){
+  color: var(--lightgray);
+  margin-bottom: 10px;
+}
+.newsletter-form input{
+  width: 75%;
+  background-color: var(--black);
+  border: 2px solid var(--silver);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: var(--silver);
+  padding-inline: 10px;
+}
+.newsletter-form input::placeholder{
+  color: var(--silver);
+}
+.newsletter-form a{
+  font-weight: bolder;
+  text-align: center;
+  width: 25%;
+  padding-block: 5px;
+  color: var(--black);
+  background-color: var(--silver);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-
-
-
+.newsletter-form input:focus-visible {
+  outline: 0;
+}
+.footer-nav{
+  flex-basis: 60%;
+  width: 60%;
+}
 
 
 /* breakpoints */
