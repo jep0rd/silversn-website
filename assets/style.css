@@ -136,7 +136,7 @@ nav.sticky{
   flex-grow: 1;
 }
 .spurs-logo{
-  width: 50px;
+  width: 100px;
 }
 
 .title-nav{
@@ -221,8 +221,6 @@ header{
   border-radius: 8px;
 
 }
-
-
 .hero-body img{
   height: 300px;
 }
@@ -260,14 +258,12 @@ header{
   font-size: 4rem;
   letter-spacing: 2px;
 }
-
 .title-body2{
   justify-content: space-evenly;
 }
 .title-body3 .header-title{
   font-size: 3rem;
 }
-
 .hero-body p{
   font-size: 1rem;
   margin-block-start: 0;
@@ -275,7 +271,6 @@ header{
   text-align: justify;
   padding-top: 10px;
 }
-
 .learnmore-button{
   bottom: -20px;
   right: 50px;
@@ -518,12 +513,12 @@ header{
 }
 
 
-.jersey-details{
+.jersey-details,.jersey-details2{
   width: 100%;
   margin-bottom: 100px;
   padding-inline: 20px;
 }
-.jersey-details > *{
+.jersey-details > *,.jersey-details2 > *{
   width: 50%;
 }
 .jersey-details .image-left{
@@ -550,7 +545,7 @@ header{
   width: 380px;
 }
 
-.jersey-details .image-right img{
+.jersey-details2 .image-right img{
   max-width: 400px;
   margin-bottom: 0;
   padding-left: 40px;
@@ -769,26 +764,28 @@ a.shop-button:hover{
   max-width: 1200px;
   border-top: 3px solid var(--silver);
   bottom: -100px;  
-  padding: 40px 20px;
+  padding: 40px 20px 20px;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 .footer-logo{
-  flex-basis: 50%;
-  width: 50%;
+  width: auto;
   height: auto;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 .footer-logo img{
-  width: 50px;
+  max-width: 250px;
 }
 .footer-newsletter{
-  flex-basis: 50%;
-  width: 50%;
+  width: auto;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 40px;
   border-radius: 20px;
+  margin-bottom: 50px;
 }
 .footer-newsletter .title{
   font-size: 1.4rem;
@@ -799,7 +796,7 @@ a.shop-button:hover{
   margin-bottom: 10px;
 }
 .newsletter-form input{
-  width: 75%;
+  width: 340px;
   background-color: var(--black);
   border: 2px solid var(--silver);
   border-top-left-radius: 8px;
@@ -813,7 +810,7 @@ a.shop-button:hover{
 .newsletter-form a{
   font-weight: bolder;
   text-align: center;
-  width: 25%;
+  width: 112px;
   padding-block: 5px;
   color: var(--black);
   background-color: var(--silver);
@@ -825,12 +822,148 @@ a.shop-button:hover{
   outline: 0;
 }
 .footer-nav{
-  flex-basis: 60%;
-  width: 60%;
+  flex-basis: 50%;
+  width: 50%;
+}
+.footer-nav ul{
+  gap: 30px;
+  font-size: .9rem;
+}
+.footer-nav ul li a{
+  color: var(--lightgray);
+}
+.page-footer small{
+  color: var(--darkgray);
 }
 
 
 /* breakpoints */
-@media all and (min-width: 840px){
+@media all and (max-width: 920px){
+  .page-footer{
+    flex-flow: column wrap;
+  }
+  .page-footer .footer-logo{
+    width: 100%;
+  }
+  .page-footer .footer-nav{
+    flex-basis: auto;
+    width: 100%;
+  }
+  .footer-nav ul{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
 
+@media all and (max-width: 840px){
+  .article-body{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .article-image{
+    margin-bottom: 20px;
+  }
+  .history-container{
+    flex-flow: column-reverse wrap;
+  }
+  .history-image img{
+    max-width: 500px;
+  }
+  .jersey-details{
+    flex-flow: column-reverse wrap;
+    align-items: center;
+    width: auto;
+  }
+  .jersey-details2{
+    flex-flow: column wrap;
+    align-items: center
+  }
+  .jersey-details .image-left{
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+  }
+  .jersey-details2 .image-right{
+    width: 100%;
+    justify-content: center;
+  }
+  .jersey-details2 .image-right img{
+    padding: 0;
+  }
+  .carousel-body{
+    width: 75%;
+  }
+}
+
+@media all and (max-width: 740px){
+  .hero-body{
+    max-width: 550px;
+    max-height: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--black);
+  }
+  .hero-body::after{
+    max-width: 560px;
+    max-height: 265px;
+  }
+
+  .hero-body img{
+    max-width: 140px;
+    height: auto;
+  }
+  .title-container{
+    max-width: 460px;
+    padding-inline: 5px;
+    align-items: left;
+    justify-content: flex-start;
+    max-width
+  }
+  .title-body1,.title-body2,.title-body3{
+    justify-content: space-between;
+  }
+  .header-title{
+    line-height: 50px;
+  }
+  .title-body1 .header-title{
+    font-size: 2.25rem;
+  }
+  .title-body2 .header-title{
+    font-size: 3rem;
+  }
+  .title-body2{
+    justify-content: space-evenly;
+  }
+  .title-body3 .header-title{
+    font-size: 2.25rem;
+  }
+  .hero-body p{
+    font-size: .9rem;
+    z-index: 1;
+  }
+  .learnmore-button{
+    bottom: -20px;
+    right: 35px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    background-image: 
+      linear-gradient(
+        60deg,
+        var(--turquoise)33%,
+        var(--fuchsia)66%,
+        var(--orange));
+    background-size: 400% 400%;
+    animation: bgAnimation 4s infinite linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+  .learnmore-padding{
+    bottom: -20px;
+    right: 24px;
+    width: 173px;
+    height: 50px;
+    background: var(--black);
+    z-index: 0;
+  }
 }
