@@ -200,6 +200,7 @@ header{
   padding: 10px 20px;
   border-radius: 5px;
   background: var(--black);
+  margin-inline: 20px;
 }
 .hero-container::after{
   content: '';
@@ -266,6 +267,12 @@ header{
   height: 50px;
   background: var(--black);
   z-index: 0;
+}
+.hero-carousel-container{
+  width: 500px;
+}
+.hero-carousel .carousel-item img{
+  width: 200px;
 }
 /* header end */
 
