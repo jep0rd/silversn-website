@@ -393,13 +393,13 @@ header{
   color: var(--turquoise);
   margin-left: 10px;
 }
-.recap1{
+.recap{
   max-width: 1000px;
   isolation: isolate;
   overflow: hidden;
   margin-bottom: 40px;
 }
-.recap1::before{
+.recap::before{
   content: '';
   position: absolute;
   inset: 0;
@@ -410,11 +410,11 @@ header{
       rgb(0 0 0 / 1)
     );
 }
-.recap1 img{
+.recap img{
   width: 100%;
 }
 
-.recap1 span{
+.recap span{
   font-weight: bolder;
   bottom: 0;
   left: 0;
@@ -436,7 +436,7 @@ header{
   visibility: hidden;
   transition: visibility .1s linear;
 }
-.recap1:hover .recap-button{
+.recap:hover .recap-button{
   visibility: visible;
   color: var(--silver);
 
@@ -562,15 +562,14 @@ header{
 
 /* carousel */
 .carousel-container{
-  padding-inline: 20px;
   justify-content: center;
-  padding-block: 60px 120px;
+  padding-block: 60px;
 }
 .carousel-body{
   padding: 5px;
   border-radius: 5px;
   background-image: url(images/background-pattern.png);
-  width: 50%;
+  width: 600px;
   background-size: 100%;
 }
 .carousel-item img{
@@ -890,6 +889,14 @@ a.shop-button:hover{
   .jersey-details2 .image-right img{
     padding: 0;
   }
+  .content-left {
+    align-items: center;
+    text-align: center;
+  }
+  .content-right {
+    align-items: center;
+    text-align: center;
+  }
   .carousel-body{
     width: 75%;
   }
@@ -907,7 +914,6 @@ a.shop-button:hover{
     max-width: 560px;
     max-height: 265px;
   }
-
   .hero-body img{
     max-width: 140px;
     height: auto;
@@ -915,12 +921,6 @@ a.shop-button:hover{
   .title-container{
     max-width: 460px;
     padding-inline: 5px;
-    align-items: left;
-    justify-content: flex-start;
-    max-width
-  }
-  .title-body1,.title-body2,.title-body3{
-    justify-content: space-between;
   }
   .header-title{
     line-height: 50px;
@@ -931,9 +931,6 @@ a.shop-button:hover{
   .title-body2 .header-title{
     font-size: 3rem;
   }
-  .title-body2{
-    justify-content: space-evenly;
-  }
   .title-body3 .header-title{
     font-size: 2.25rem;
   }
@@ -942,28 +939,90 @@ a.shop-button:hover{
     z-index: 1;
   }
   .learnmore-button{
-    bottom: -20px;
     right: 35px;
-    font-weight: bolder;
     font-size: 1.5rem;
-    background-image: 
-      linear-gradient(
-        60deg,
-        var(--turquoise)33%,
-        var(--fuchsia)66%,
-        var(--orange));
-    background-size: 400% 400%;
-    animation: bgAnimation 4s infinite linear;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 1;
   }
   .learnmore-padding{
     bottom: -20px;
     right: 24px;
     width: 173px;
-    height: 50px;
-    background: var(--black);
-    z-index: 0;
   }
+  .jersey-title1,.jersey-title2{
+    font-size: 1.4rem;
+    padding-inline: 80px;
+  }
+  .jersey-title3{
+    font-size: 1.7rem;
+    padding-inline: 80px;
+  }
+  .footer-logo img{
+    max-width: 200px;
+  }
+  .fsize1{
+    font-size: 2.2rem;
+  }
+  .fsize2{
+    font-size: 1.8rem;
+  }
+  .fsize3{
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 640px){
+  .fsize1{
+    font-size: 2rem;
+  }
+  .fsize2{
+    font-size: 1.5rem;
+  }
+  .container-nav{
+    display: none;
+  }
+
+  .hero-body{
+    max-width: 550px;
+    height: 245px;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--black);
+  }
+  .hero-body::after{
+    max-width: 490px;
+    max-height: 255px;
+  }
+  .hero-body img{
+    display: none;
+  }
+  .title-container{
+    max-width: 460px;
+    padding-inline: 5px;
+  }
+  .header-title{
+    line-height: 50px;
+  }
+  .title-body1 .header-title{
+    font-size: 2.25rem;
+  }
+  .title-body2 .header-title{
+    font-size: 3rem;
+  }
+  .title-body3 .header-title{
+    font-size: 2.25rem;
+  }
+  .hero-body p{
+    font-size: .9rem;
+    z-index: 1;
+    padding-top: 5px;
+  }
+  .learnmore-button{
+    right: 30px;
+    font-size: 1.5rem;
+  }
+  .learnmore-padding{
+    bottom: -20px;
+    right: 19px;
+    width: 173px;
+  }
+
 }
