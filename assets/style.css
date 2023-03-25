@@ -623,24 +623,75 @@ a.shop-button:hover{
   background-color: var(--orange);
 }
 .schedule-body{
+  width: 600px;
+  margin: 20px auto;
+  border-radius: 5px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.schedule-body .away{
   width: 100%;
-  margin: auto;
-  padding: 20px;
-}
-.schedule-body img{
-  max-width: 100%;
-  margin: auto;
-}
-.schedule-body small{
+  padding-block: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid var(--silver);
+  font-weight: bolder;
+  font-size: 1.2rem;
   text-align: center;
-  color: var(--darkgray);
+}
+
+.schedule-body .home{
+  width: 100%;
+  padding-block: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid var(--silver);
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--silver);
+  color: var(--black);
+}
+
+.team{
+  width: 100%;
+  justify-content: center;
+  padding-block: 5px;
+  align-items: center;
+  text-align: left;
+  border-inline: 2px solid var(--silver);
+  border-bottom: 2px solid var(--silver);
+}
+.schedule span:nth-child(2),.schedule span:nth-child(3){
+  color: var(--lightgray);
+  font-size: .8rem;
+}
+.schedule{
+  width: 150px;
+}
+.team img{
+  max-width: 100px;
+}
+.team-name{
+  width: 150px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.broadcast{
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+  border-inline: 2px solid var(--silver);
+  border-bottom: 2px solid var(--silver);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 /* schedule end */
 
 /* community */
 .community-container{
   max-width: 1200px;
-  height: 500px;
   padding: 20px;
   margin-inline: auto;
 }
@@ -738,9 +789,10 @@ a.shop-button:hover{
 
 /* footer */
 .page-footer{
+  margin-inline: auto;
+  margin-top: 40px;
   max-width: 1200px;
-  border-top: 3px solid var(--silver);
-  bottom: -100px;  
+  border-top: 3px solid var(--silver);  
   padding: 40px 20px 20px;
   justify-content: space-between;
   align-items: center;
