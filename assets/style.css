@@ -115,7 +115,19 @@ small{
   left: 0;
 }
 #news{
-  top: -35px;
+  top: -60px;
+  left: 0;
+}
+#featured{
+  top: -60px;
+  left: 0;
+}
+#schedule{
+  top: -60px;
+  left: 0;
+}
+#community{
+  top: -60px;
   left: 0;
 }
 
@@ -228,13 +240,11 @@ li a.store-button{
   padding-inline: 40px;
 }
 
-
-
 /* navigation bar end */
 
 /* header */
 header{
-  padding: 150px 0 200px 0;
+  padding: 150px 0 210px 0;
   align-items: center;
   justify-content: center;
 }
@@ -354,7 +364,7 @@ header{
 .article-container{
   padding: 20px 20px 100px 20px;
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .article-container::after{
@@ -396,12 +406,31 @@ header{
 .read-more-container{
   justify-content: flex-end;
   text-align: end;
+  gap: 10px;
 }
-.read-more-container a{
-  color: var(--turquoise);
+.read-more-container a:first-child{
+  color: var(--black);
+  padding: 5px 20px;
+  border: 2px solid var(--turquoise);
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: var(--turquoise);
+  font-weight: bolder;
 }
+
+.read-more-container a:nth-child(2){
+  align-self: center;
+}
+.fa-share-nodes{
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  color: var(--silver);
+}
+
 .read-more-container a:hover{
-  color: #02fff2;
+  color: var(--turquoise);
+  background-color: var(--black);
+  font-weight: ;
 }
 /* top news end */
 
@@ -497,12 +526,17 @@ header{
   padding-inline: 20px;
   text-align: justify;
 }
+.history-content .read-more-container{
+  padding-inline: 20px;
+}
 .history-content .read-more-container a{
-  padding-right: 20px;
-  color: var(--fuchsia);
+  background-color: var(--fuchsia);
+  color: var(--black);
+  border: 2px solid var(--fuchsia);
 }
 .history-content .read-more-container a:hover{
-  color: #ff7096;
+  color: var(--fuchsia);
+  background-color: var(--black);
 }
 .history-image{
   align-items: center;
@@ -586,7 +620,7 @@ header{
 /* carousel */
 .carousel-container{
   justify-content: center;
-  padding-block: 60px;
+  margin-block: 60px;
 }
 .carousel-body{
   padding: 5px;
@@ -667,7 +701,7 @@ a.shop-button:hover{
   background-color: var(--orange);
 }
 .schedule-body{
-  max-width: 600px;
+  width: 600px;
   margin: 20px auto;
   border-radius: 5px;
   align-items: center;
@@ -694,7 +728,7 @@ a.shop-button:hover{
   font-weight: bolder;
   font-size: 1.2rem;
   text-align: center;
-  background-color: var(--silver);
+  background-color: var(--orange);
   color: var(--black);
 }
 
@@ -933,11 +967,13 @@ a.shop-button:hover{
     flex-wrap: wrap;
     justify-content: center;
   }
-  .article-image{
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
   .article-image img{
+    width: 100%;
+    padding-right: 0;
+  }
+  .article-image{
+    max-width: 600px;
+    margin-bottom: 20px;
     padding: 20px;
   }
   .history-container{
@@ -945,6 +981,9 @@ a.shop-button:hover{
   }
   .history-image img{
     max-width: 500px;
+  }
+  .history-content{
+    padding-right: 0;
   }
   .jersey-details{
     flex-flow: column-reverse wrap;
@@ -1034,7 +1073,7 @@ a.shop-button:hover{
     padding-inline: 40px;
   }
   .image-left img,.image-right img{
-    width: 300px;
+    width: 100%;
   }
   .schedule-body{
     max-width: 500px;
@@ -1060,39 +1099,24 @@ a.shop-button:hover{
   }
 
   .contributor-body{
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 20px;
+    justify-content: flex-start;
   }
-  .contributor{
-    padding: 20px ;
-    margin-bottom: 20px;
-  }
-  
   .contributor img{
     max-width: 120px;
     max-height: 120px;
   }
   .contributor .profile{
     padding-left: 20px;
-    min-width: 300px;
-  }
-  .profile > * {
-    margin-bottom: 10px;
+    min-width: auto;
   }
   .profile .name{
     font-size: 1.3rem;
-    font-weight: bolder;
   }
   .profile .role{
     font-size: 1.1rem;
-    color: var(--lightgray);
   }
-
   .profile .address{
-    color: var(--darkgray);
     font-size: .9rem;
-
   }
   .profile .social a{
     font-size: 1.3rem;
@@ -1138,11 +1162,12 @@ a.shop-button:hover{
   .newsletter-form a{
     font-weight: bolder;
     text-align: center;
+    width: auto;
     padding-block: 5px;
-    padding-inline: 500p;
+    padding-inline: 16px;
     color: var(--black);
     background-color: var(--silver);
-    border-radius: 8px;
+    border-radius: 20px;
   }
 }
 
@@ -1159,12 +1184,28 @@ a.shop-button:hover{
   .article-content p:nth-child(3){
     display: none;
   }
+  .content-left span,.content-right span{
+    width: 100%;
+  }
+  .content-left .line,.content-right .line{
+    width: 100%;
+  }
+  .jersey-details > *, .jersey-details2 > * {
+    width: 100%;
+}
   .carousel-body{
     padding: 5px;
     border-radius: 5px;
     background-image: url(images/background-pattern.png);
     width: 375px;
     background-size: 100%;
+  }
+  .carousel-description{
+    align-items: flex-end;
+    width: 375px;
+    bottom: 80px;
+    text-align: center;
+    justify-content: center;
   }
   .schedule-body{
     width: 300px;
@@ -1181,5 +1222,180 @@ a.shop-button:hover{
   }
   .schedule span:nth-child(1){
     margin-right: 5px;
+  }
+  .footer-nav ul{
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+@media all and (max-width: 425px){
+  nav.sticky{
+    padding: 0 10px;
+  }
+  .offcanvas-nav .link-item a {
+    font-size: 1rem;
+  }
+  .fsize1{
+    font-size: 1.5rem;
+  }
+  .fsize2{
+    font-size: 1.3rem;
+  }
+  .fsize3{
+    font-size: .9rem;
+  }
+  .section-title span:first-child,.section-title2 span:first-child{
+    padding-left: 5px;
+  }
+  .news-container{
+    padding: 20px 0;
+  }
+  .article-container{
+    padding: 20px 10px 60px;  
+  }
+  .publisher{
+    flex-direction: column;
+  }
+  .article-image{
+    padding: 0 0 20px;
+  }
+  .article-content p {
+    font-size: .9rem;
+  }
+  .read-more-container a:first-child {
+    padding: 4px 18px;
+    font-size: .8rem;
+  }
+  .fa-share-nodes {
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    color: var(--silver);
+}
+  .recap-container {
+    padding: 20px 10px 40px;
+  }
+  .recap span{
+    font-size: 1rem;
+    padding-inline: 10px;
+  }
+  .featured-container{
+    padding: 20px 0;
+  }
+  .history-container{
+    padding: 20px 10px 100px;
+  }
+  .jersey-title1, .jersey-title2 {
+    font-size: 1.2rem;
+    padding-inline: 50px;
+  }
+  .jersey-title3{
+    font-size: 1.5rem;
+    padding-inline: 50px;
+  }
+  .content-left p, .content-right p{
+    width: 100%;
+  }
+  .image-left img, .image-right img {
+    width: 100%;
+  }
+  .jersey-details,.jersey-details2{
+    padding: 10px;
+  }
+  .carousel-body {
+    margin-inline: 10px;
+    padding: 5px;
+    width: 100%;
+  }
+  .carousel-description {
+    width: 100%;
+    max-width: 375px;
+  }
+  .shop span{
+    font-size: .9rem;
+    padding-inline: 30px;
+  }
+  a.shop-button {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-inline: 40px;
+    font-size: .9rem;
+  }
+  .schedule-container {
+    padding: 0px;
+    margin-bottom: 80px;
+    align-items: center;
+  }
+  .schedule-container .section-title{
+    width: 100%;
+  }
+  .schedule-body {
+    width: 100%;
+    max-width: 300px;
+    margin-inline: 20px;
+  }
+
+
+  .community-container {
+    padding: 20px 0;
+  }
+  .contributor-body {
+    padding: 20px 10px;
+    justify-content: center;
+  }
+  .contributor{
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .contributor img{
+    align-self: center;
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .contributor .profile{
+    padding-left: 0px;
+  }
+  .profile .name{
+    font-size: 1.2rem;
+  }
+  .profile .role{
+    font-size: 1rem;
+  }
+  .profile .address{
+    font-size: .8rem;
+
+  }
+  .profile .social{
+    justify-content: space-evenly;
+  }
+  .profile .social a{
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+  .join-community .pitch {
+    font-size: 1rem;
+  }
+  .join-community .join-button {
+    font-size: .9rem;
+  }
+  .newsletter-form a {
+    font-size: .9rem;
+  }
+  .footer-logo img{
+    width: 100px;
+  }
+  .footer-newsletter .title {
+    font-size: 1.2rem;
+  }
+  .footer-newsletter span:nth-child(2){
+    font-size: .9rem;
+  }
+  .footer-nav ul li{
+    font-size: .8rem;
+  }
+  .page-footer small {
+    text-align: center;
   }
 }
