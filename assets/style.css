@@ -191,7 +191,7 @@ button.btn{
   font-size: 1.5rem;
 }
 .offcanvas{
-  --bs-offcanvas-width: 40%;
+  --bs-offcanvas-width: 50%;
   background-color: var(--black);
 }
 .offcanvas-header{
@@ -602,8 +602,7 @@ header{
 .carousel-description{
   align-items: flex-end;
   width: 50%;
-  bottom: 130px;
-  padding: 20px 40px;
+  bottom: 80px;
   text-align: center;
   justify-content: center;
 }
@@ -668,7 +667,7 @@ a.shop-button:hover{
   background-color: var(--orange);
 }
 .schedule-body{
-  width: 600px;
+  max-width: 600px;
   margin: 20px auto;
   border-radius: 5px;
   align-items: center;
@@ -935,7 +934,11 @@ a.shop-button:hover{
     justify-content: center;
   }
   .article-image{
+    max-width: 400px;
     margin-bottom: 20px;
+  }
+  .article-image img{
+    padding: 20px;
   }
   .history-container{
     flex-flow: column-reverse wrap;
@@ -1028,6 +1031,7 @@ a.shop-button:hover{
   }
   .history-image img{
     max-width: 250px;
+    padding-inline: 40px;
   }
   .image-left img,.image-right img{
     width: 300px;
@@ -1140,5 +1144,42 @@ a.shop-button:hover{
     background-color: var(--silver);
     border-radius: 8px;
   }
+}
 
+@media all and (max-width: 540px){
+  .recap span{
+    font-size: 1.3rem;
+  }
+  .hero-carousel-container{
+    display: none;
+  }
+  .header-container{
+    padding-block: 160px;
+  }
+  .article-content p:nth-child(3){
+    display: none;
+  }
+  .carousel-body{
+    padding: 5px;
+    border-radius: 5px;
+    background-image: url(images/background-pattern.png);
+    width: 375px;
+    background-size: 100%;
+  }
+  .schedule-body{
+    width: 300px;
+  }
+  .team{
+    flex-direction: column;
+  }
+  .team .schedule{
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .schedule span:nth-child(1){
+    margin-right: 5px;
+  }
 }
