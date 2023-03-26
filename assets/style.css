@@ -939,9 +939,13 @@ a.shop-button:hover{
 .footer-nav ul li a{
   color: var(--lightgray);
 }
+.footer-nav ul li a:hover{
+  color: var(--silver);
+}
 .page-footer small{
   color: var(--darkgray);
 }
+/* footer end */
 
 
 /* breakpoints */
@@ -1247,6 +1251,9 @@ a.shop-button:hover{
   .section-title span:first-child,.section-title2 span:first-child{
     padding-left: 5px;
   }
+  .offcanvas {
+    --bs-offcanvas-width: 70%;
+  }
   .news-container{
     padding: 20px 0;
   }
@@ -1340,6 +1347,7 @@ a.shop-button:hover{
     padding: 20px 0;
   }
   .contributor-body {
+    flex-direction: column;
     padding: 20px 10px;
     justify-content: center;
   }
@@ -1356,6 +1364,7 @@ a.shop-button:hover{
   }
   .contributor .profile{
     padding-left: 0px;
+    align-items: center;
   }
   .profile .name{
     font-size: 1.2rem;
@@ -1369,6 +1378,7 @@ a.shop-button:hover{
   }
   .profile .social{
     justify-content: space-evenly;
+    gap: 20px;
   }
   .profile .social a{
     font-size: 1.2rem;
