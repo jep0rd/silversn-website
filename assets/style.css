@@ -185,6 +185,51 @@ a.store-button:hover{
   color: var(--silver);
   transition: .2s;
 }
+button.btn{
+  padding: 0;
+  display: none;
+  font-size: 1.5rem;
+}
+.offcanvas{
+  --bs-offcanvas-width: 40%;
+  background-color: var(--black);
+}
+.offcanvas-header{
+  height: 75px;
+  padding-right:20px;
+}
+.offcanvas-header .btn-close {
+  padding: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.btn-close {
+  box-sizing: content-box;
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+.btn-close i{
+  color: var(--darkgray);
+  font-size: 1.8rem;
+}
+.offcanvas-nav{
+  gap: 30px;
+}
+.offcanvas-nav .link-item a{
+  font-size: 1.2rem;
+}
+li a.store-button{
+  padding-inline: 40px;
+}
+
+
+
 /* navigation bar end */
 
 /* header */
@@ -777,7 +822,6 @@ a.shop-button:hover{
   background-color: var(--silver);
   color: var(--black);
   font-weight: bolder ;
-
 }
 
 .join-button:hover{
@@ -835,6 +879,7 @@ a.shop-button:hover{
 }
 .newsletter-form input::placeholder{
   color: var(--silver);
+  opacity: .2;
 }
 .newsletter-form a{
   font-weight: bolder;
@@ -962,7 +1007,138 @@ a.shop-button:hover{
   .fsize2{
     font-size: 1.5rem;
   }
+  .header-container{
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .hero-container{
+    margin-bottom: 20px;
+  }
   .container-nav{
     display: none;
   }
+  .store-container{
+    display: none;
+  }
+  .nav-container a{
+    flex-grow: 0;
+  }
+  button.btn{
+    display: block;
+  }
+  .history-image img{
+    max-width: 250px;
+  }
+  .image-left img,.image-right img{
+    width: 300px;
+  }
+  .schedule-body{
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 5px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2)
+  }
+  .team{
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+    text-align: left;
+  }
+  .schedule{
+    max-width: 150px;
+  }
+  .team-name{
+    max-width: 150px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .contributor-body{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .contributor{
+    padding: 20px ;
+    margin-bottom: 20px;
+  }
+  
+  .contributor img{
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .contributor .profile{
+    padding-left: 20px;
+    min-width: 300px;
+  }
+  .profile > * {
+    margin-bottom: 10px;
+  }
+  .profile .name{
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+  .profile .role{
+    font-size: 1.1rem;
+    color: var(--lightgray);
+  }
+
+  .profile .address{
+    color: var(--darkgray);
+    font-size: .9rem;
+
+  }
+  .profile .social a{
+    font-size: 1.3rem;
+    margin-right: 20px
+  }
+  .join-community{
+    padding-block: 0px;
+    max-width: 800px;
+    align-self: center;
+    text-align: center;
+  }
+  .join-community .pitch{
+    font-size: 1.1rem;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+  .join-community .join-button{
+    padding: 8px 16px;
+  }
+  .link-item a:hover::after{
+    width: 0%;
+  }
+  .footer-logo img{
+    width: 150px;
+  }
+  .footer-newsletter{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .newsletter-form input{
+    display: none;
+  }
+  .newsletter-form{
+    justify-content: center;
+  }
+  .newsletter-form a{
+    font-weight: bolder;
+    text-align: center;
+    padding-block: 5px;
+    padding-inline: 500p;
+    color: var(--black);
+    background-color: var(--silver);
+    border-radius: 8px;
+  }
+
 }
