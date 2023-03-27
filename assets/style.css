@@ -1181,8 +1181,10 @@ a.shop-button:hover{
   .hero-carousel-container{
     display: none;
   }
-  .header-container{
-    padding-block: 160px 250px;
+  header {
+    padding: 150px 0 250px 0;
+    align-items: center;
+    justify-content: center;
   }
   .article-content p:nth-child(3){
     display: none;
