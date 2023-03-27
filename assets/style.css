@@ -244,7 +244,8 @@ li a.store-button{
 
 /* header */
 header{
-  padding: 150px 0 250px 0;
+  padding: 150px 0 120px 0;
+  margin-bottom: 120px;
   align-items: center;
   justify-content: center;
 }
@@ -1181,7 +1182,7 @@ a.shop-button:hover{
     display: none;
   }
   .header-container{
-    padding-block: 160px 210px;
+    padding-block: 160px 250px;
   }
   .article-content p:nth-child(3){
     display: none;
