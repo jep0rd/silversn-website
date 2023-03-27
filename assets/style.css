@@ -623,7 +623,6 @@ header{
 }
 .carousel-body{
   padding: 5px;
-  border-radius: 5px;
   background-image: url(images/background-pattern.png);
   width: 600px;
   background-size: 100%;
@@ -635,7 +634,7 @@ header{
 .carousel-description{
   align-items: flex-end;
   width: 50%;
-  bottom: 80px;
+  bottom: 20px;
   text-align: center;
   justify-content: center;
 }
@@ -1197,18 +1196,10 @@ a.shop-button:hover{
     width: 100%;
 }
   .carousel-body{
-    padding: 5px;
-    border-radius: 5px;
-    background-image: url(images/background-pattern.png);
     width: 375px;
-    background-size: 100%;
   }
   .carousel-description{
-    align-items: flex-end;
     width: 375px;
-    bottom: 80px;
-    text-align: center;
-    justify-content: center;
   }
   .schedule-body{
     width: 300px;
