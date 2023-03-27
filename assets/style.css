@@ -1182,7 +1182,7 @@ a.shop-button:hover{
     display: none;
   }
   .header-container{
-    padding-block: 160px;
+    padding-block: 160px 210px;
   }
   .article-content p:nth-child(3){
     display: none;
