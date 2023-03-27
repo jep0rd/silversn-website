@@ -900,6 +900,9 @@ a.shop-button:hover{
   color: var(--lightgray);
   margin-bottom: 10px;
 }
+.newsletter-form{
+  flex-direction: row-reverse;
+}
 .newsletter-form input{
   width: 340px;
   background-color: var(--black);
@@ -923,6 +926,15 @@ a.shop-button:hover{
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+.newsletter-form a:hover{
+  background: var(--black);
+  color: var(--silver);
+}
+.newsletter-form a:hover ~ input{
+  border-color: var(--black);
+}
+
 
 .newsletter-form input:focus-visible {
   outline: 0;
@@ -1324,6 +1336,10 @@ a.shop-button:hover{
     padding: 0px;
     margin-bottom: 80px;
     align-items: center;
+  }
+  #schedule{
+    top: -80px;
+    left: 0;
   }
   .schedule-container .section-title{
     width: 100%;
